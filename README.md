@@ -7,7 +7,7 @@ This project was created with the objective of demonstrating a performance degra
 ### Simple request example
 
 ```sh
-curl --location --request GET 'localhost:8080/oauth/token'
+curl --location --request GET 'http://localhost:8080/oauth/token'
 ```
 
 ### Build images
