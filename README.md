@@ -67,7 +67,7 @@ Run 3 3589.47/s
 
 Production limit
 
-####  JIT - Docker 300 milicore
+####  JIT - Docker "300 milicore"
 
 Execution:
 
@@ -84,7 +84,7 @@ Run 2 265.62/s
 Run 3 314.46/s
 ```
 
-#### Native - Docker 300 milicore
+#### Native - Docker "300 milicore"
 
 Execution:
 
