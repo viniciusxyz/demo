@@ -1,0 +1,11 @@
+FROM ubuntu:22.04
+
+ADD target/fake-oauth2-server /app/fake-oauth2-server
+ADD /src/main/resources/key1.pem /cert/key1.pem
+
+RUN mkdir -p /logs
+RUN chgrp -R 0 /logs/ && chmod -R g=u /logs/
+RUN chgrp -R 0 /app/ && chmod -R g=u /app/
+
+RUN chmod +x /app/fake-oauth2-server
+ENTRYPOINT ["sh", "-c", "/app/fake-oauth2-server $RUN_VARIABLES"]

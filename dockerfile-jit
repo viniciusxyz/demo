@@ -1,0 +1,16 @@
+FROM ghcr.io/graalvm/jdk:ol8-java11-22.3.0
+
+ENV TZ="America/Sao_Paulo"
+ENV JAVA_OPTS="-Xms64m"
+ENV RUN_VARIABLES=""
+
+EXPOSE 8080
+
+ADD /target/fake-oauth2-server.jar /app/fake-oauth2-server.jar
+ADD /src/main/resources/key1.pem /cert/key1.pem
+
+RUN mkdir -p /logs
+RUN chgrp -R 0 /logs/ && chmod -R g=u /logs/
+RUN chgrp -R 0 /app/ && chmod -R g=u /app/
+
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS $RUN_VARIABLES -jar /app/fake-oauth2-server.jar"]
