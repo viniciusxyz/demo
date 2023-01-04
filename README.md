@@ -4,6 +4,12 @@ This project was created with the objective of demonstrating a performance degra
 
 - GIthub issue https://github.com/oracle/graal/issues/5697
 
+### Simple request example
+
+```sh
+curl --location --request GET 'localhost:8080/oauth/token'
+```
+
 ### Build images
 
 Jit Image
