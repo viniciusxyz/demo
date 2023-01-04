@@ -1,6 +1,8 @@
 ## Fake OAuth2 Server
 
-This project was created with the objective of demonstrating a performance degradation when using native compilation with graalvm in a scenario where we have signatures with rsa
+This project is a fake OAuth2 server, built to exemplify the execution performance with native compilation that is more than 70% slower than the JIT version.
+
+This application issues an RS256 signed jwt token with a Get on /oauth/token.
 
 - GIthub issue https://github.com/oracle/graal/issues/5697
 
